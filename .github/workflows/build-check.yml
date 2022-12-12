@@ -48,7 +48,7 @@ jobs:
       run: cmake --build ./build --config MinSizeRel
     - name: doxybook2 add to path
       working-directory: ./doxy
-      run: cp build/src/DoxybookCli/doxybook2 ../..
+      run: sudo cp $PWD/build/src/DoxybookCli/doxybook2 /usr/bin/. 
     - uses: actions/checkout@master
     - name: Install Dependencies
       run:  sudo apt install pandoc texlive-full mkdocs doxygen
