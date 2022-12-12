@@ -16,6 +16,7 @@ jobs:
       with:
         repository: matusnovak/doxybook2
         path: ./doxy
+        fetch-depth: 0
         ref: 187dc2991dabe65f808263
     - name: Download Japanese fonts
       run: curl -LO https://github.com/googlefonts/noto-cjk/blob/main/Sans/OTF/Japanese/NotoSansCJKjp-Black.otf && curl -LO https://github.com/googlefonts/noto-cjk/blob/main/Sans/OTF/Japanese/NotoSansCJKjp-Bold.otf && curl -LO https://github.com/googlefonts/noto-cjk/blob/main/Sans/OTF/Japanese/NotoSansCJKjp-DemiLight.otf && curl -LO https://github.com/googlefonts/noto-cjk/blob/main/Sans/OTF/Japanese/NotoSansCJKjp-Light.otf && curl -LO https://github.com/googlefonts/noto-cjk/blob/main/Sans/OTF/Japanese/NotoSansCJKjp-Medium.otf && curl -LO https://github.com/googlefonts/noto-cjk/blob/main/Sans/OTF/Japanese/NotoSansCJKjp-Regular.otf && curl -LO https://github.com/googlefonts/noto-cjk/blob/main/Sans/OTF/Japanese/NotoSansCJKjp-Thin.otf
