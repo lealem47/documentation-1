@@ -14,12 +14,12 @@ SOURCES = chapter01.md \
 PDF = wolfTPM-Manual.pdf
 
 wolftpm:
-	@git clone --depth 1 https://github.com/wolfSSL/wolftpm
+	@git clone  https://github.com/wolfSSL/wolftpm
 
 
 .PHONY: wolftpm-update
 wolftpm-update: wolftpm
-	@cd wolftpm && git pull --ff-only
+	@cd wolftpm && git checkout e54734a3ab2507fbba
 
 .PHONY: api
 api: wolftpm-update
