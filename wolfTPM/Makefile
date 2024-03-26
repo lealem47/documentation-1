@@ -23,6 +23,7 @@ wolftpm-update: wolftpm
 
 .PHONY: api
 api: wolftpm-update
+	@pandoc --version
 	@mkdir -p api/md
 	@cp Doxyfile wolftpm/docs
 	@cd wolftpm && doxygen docs/Doxyfile
