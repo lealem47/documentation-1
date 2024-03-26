@@ -50,6 +50,8 @@ jobs:
     - uses: actions/checkout@master
     - name: Install Dependencies
       run:  sudo apt install pandoc texlive-full mkdocs doxygen
+    - name: pandoc display version
+      run:  pandoc --version
     - name: wolfssl html
       run: cd wolfSSL && export PATH=$PATH:"/home/runner/work/documentation" && make html
     - name: wolfssl pdf
