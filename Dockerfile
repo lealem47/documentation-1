@@ -1,4 +1,4 @@
-FROM texlive/texlive:latest AS builder
+FROM texlive/texlive:TL2021-historic AS builder
 
 WORKDIR /deps
 
