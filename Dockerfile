@@ -8,7 +8,7 @@ RUN apt-get -y update
 # build-essential and cmake to build the dependencies
 # libfmt-dev nlohmann-json3-dev libspdlog-dev and libcxxopts-dev are needed by Doxybook2
 # fonts-noto is needed by our PDF generator
-RUN apt-cache policy pandoc
+RUN apt-cache madison pandoc
 RUN apt-get -y install pandoc=2.5-3build2 mkdocs doxygen git build-essential cmake libfmt-dev nlohmann-json3-dev libspdlog-dev libcxxopts-dev fonts-noto
 
 RUN pandoc --version
