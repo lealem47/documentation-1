@@ -9,7 +9,7 @@ RUN apt-get -y update
 # libfmt-dev nlohmann-json3-dev libspdlog-dev and libcxxopts-dev are needed by Doxybook2
 # fonts-noto is needed by our PDF generator
 RUN apt-get -y install pandoc mkdocs doxygen git build-essential cmake libfmt-dev nlohmann-json3-dev libspdlog-dev libcxxopts-dev fonts-noto
-
+RUN pandoc --version
 # Inja is a dep for Doxybook2
 RUN git clone --depth=1 https://github.com/pantor/inja
 RUN cd inja && cmake . -DBUILD_TESTING=OFF -DBUILD_BENCHMARK=OFF && make install
